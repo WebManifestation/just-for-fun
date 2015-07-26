@@ -17,6 +17,12 @@ $(document).ready(function() {
 
 	$('.block').setHightFull();
 
+	$(window).resize(function() {
+
+		$('.block').setHightFull();
+
+	});
+
 });
 
 
