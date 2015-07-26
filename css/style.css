@@ -23,17 +23,30 @@ body {
 	        box-sizing: inherit;
 }
 
-#main-content {
-	
+#main-container {
+
+	overflow: hidden;
+	width: 100%;
+
+	perspective-origin: top;
+	perspective: 1000px;
+
 }
 
 .block {
 	display: table;
+	position: absolute;
 
 	width: 100%;
 
 	font-size: 3em;
 	color: floralwhite;
+
+	-webkit-transition: all .5s ease;
+	   -moz-transition: all .5s ease;
+	    -ms-transition: all .5s ease;
+	     -o-transition: all .5s ease;
+	        transition: all .5s ease;
 }
 
 .block-content {
@@ -46,12 +59,52 @@ body {
 
 .hi {
 	background-color: darkred;
+
+	transform-origin: left;
+
+	-webkit-transform: rotateY(0deg);
+	   -moz-transform: rotateY(0deg);
+	    -ms-transform: rotateY(0deg);
+	     -o-transform: rotateY(0deg);
+	        transform: rotateY(0deg);
 }
 
+
+
 .welcome {
+
+	transform-origin: top right;
+
+	-webkit-transform: rotateZ(0deg);
+	   -moz-transform: rotateZ(0deg);
+	    -ms-transform: rotateZ(0deg);
+	     -o-transform: rotateZ(0deg);
+	        transform: rotateZ(0deg);
+
+
 	background-color: darkslateblue;
 }
 
 .details {
 	background-color: brown;
+}
+
+
+.hing {
+
+	-webkit-transform: rotateZ(120deg);
+	   -moz-transform: rotateZ(120deg);
+	    -ms-transform: rotateZ(120deg);
+	     -o-transform: rotateZ(120deg);
+	        transform: rotateZ(120deg);
+}
+
+
+.book {
+
+	-webkit-transform: rotateY(120deg);
+	   -moz-transform: rotateY(120deg);
+	    -ms-transform: rotateY(120deg);
+	     -o-transform: rotateY(120deg);
+	        transform: rotateY(120deg);
 }
