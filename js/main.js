@@ -2,29 +2,20 @@ $(document).ready(function() {
 
 	$('#main-container').click(function() {
 
-		var flowPosition = $(this).data('position');
+		var $activeBlock = $('.active');
 
-		var $nextBlock = $(this).next();
+		$nextBlock = $activeBlock.next();
 
-		if( flowPosition == 'start' ) {
+		if ( $nextBlock.length != 0 ) {
 
-			$('.hi').addClass('book');
+			$activeBlock.addClass('animated rotateOutUpLeft').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+				$activeBlock.removeClass('active');
+				$nextBlock.addClass('active');
+			})
 
-			$(this).data('position', 'one');
+		} else {
 
-		} else if( flowPosition == 'one' ) {
-
-			$('.welcome').addClass('hing');
-
-			$(this).data('position', 'two');
-
-		} else if ( flowPosition == 'two' ) {
-
-			$(this).data('position', 'start');
-
-		    $('.hi').removeClass('book');
-		    $('.welcome').removeClass('hing');
-
+			$('.block').removeClass('animated rotateOutUpLeft').addClass('animated rotateInUpLeft').removeClass('active').first().addClass('active');
 
 		};
 

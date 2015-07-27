@@ -37,6 +37,8 @@ $.fn.setIndex = function() {
 
 $(document).ready(function() {
 
+	console.log(slideData);
+
 	$('.block').setHightFull().setIndex();
 
 	$('#main-container').setHightFull();

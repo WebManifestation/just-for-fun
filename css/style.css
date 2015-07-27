@@ -60,7 +60,7 @@ body {
 .hi {
 	background-color: darkred;
 
-	transform-origin: left;
+	transform-origin: center;
 
 	-webkit-transform: rotateY(0deg);
 	   -moz-transform: rotateY(0deg);
