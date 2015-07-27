@@ -1,32 +1,29 @@
 $(document).ready(function() {
 
-	$('.block').click(function() {
+	$('#main-container').click(function() {
+
+		var flowPosition = $(this).data('position');
 
 		var $nextBlock = $(this).next();
 
-		if( $(this).hasClass('hi') ) {
+		if( flowPosition == 'start' ) {
 
-			$(this).addClass('book');
+			$('.hi').addClass('book');
 
-		} else if( $(this).hasClass('welcome') ) {
+			$(this).data('position', 'one');
 
-			$(this).addClass('hing');
+		} else if( flowPosition == 'one' ) {
 
-		} else if ( $nextBlock.length > 0 ) {
+			$('.welcome').addClass('hing');
 
-			$('html, body').animate({
-		        scrollTop: $nextBlock.offset().top
-		    }, 500);
+			$(this).data('position', 'two');
 
-		} else {
+		} else if ( flowPosition == 'two' ) {
 
-			$('html, body').animate({
-		        scrollTop: $('#main-container').offset().top
-		    }, 500);
+			$(this).data('position', 'start');
 
 		    $('.hi').removeClass('book');
 		    $('.welcome').removeClass('hing');
-
 
 
 		};

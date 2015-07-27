@@ -45,7 +45,7 @@ $(document).ready(function() {
 
 		$('.block').setHightFull();
 
-		$('main-container').setHightFull();
+		$('#main-container').setHightFull();
 
 	});
 
